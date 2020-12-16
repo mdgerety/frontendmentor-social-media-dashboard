@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(to bottom, hsl(232, 19%, 15%) 30%, hsl(230, 17%, 14%) 25%);
+    color: white;
+    font-size: 14px;
+    transition: background .5s , color .5s ;
+}
+
+body.light {
+    background: linear-gradient(to bottom, hsl(225, 100%, 98%) 30%, hsl(0, 0%, 100%) 25%);
+    transition: background .5s , color .5s ;
+    color: black;
+    
+}
+
+.container {
+    width: 90%;
+    max-width: 400px;
+    min-width: 300px;
+}
+
+/* .background-card {
+    width: 100%;
+    height: 33vh;
+    background-image: hsl(232, 19%, 15%);
+    z-index: 0;
+} */
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 0.25em;
+}
+
+.header {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+h2 {
+    font-size: 60px;
+    margin: 0;
+}
+
+.title {
+    border-bottom: 1px solid hsl(228, 34%, 66%);
+    padding-bottom: 1em;
+}
+
+.toggle {
+    display: flex;
+    flex-direction: row;
+    align-content: flex-end;
+    justify-content: space-between;
+}
+
+
+.checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.label {
+	background-image: linear-gradient(hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+	border-radius: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px;
+	position: relative;
+	height: 24px;
+    width: 42px;
+    margin-top: .75em;
+    margin-left: .75em;
+	/* transform: scale(1.5); */
+}
+
+.label .ball {
+	background-color: hsl(230, 17%, 14%);
+	border-radius: 50%;
+	position: absolute;
+	top: 2px;
+	left: 2px;
+	height: 20px;
+	width: 20px;
+	transform: translateX(0px);
+	transition: transform 0.2s linear;
+}
+
+.checkbox:checked + .label .ball {
+    transform: translateX(18px);
+    background-color: #fff;
+}
+
+.gray-text {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+}
+
+.usertag {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0em;
+}
+
+.handle {
+    color: hsl(228, 34%, 66%);
+    font-weight: 700;
+    padding: 1em;
+}
+
+.big-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.big-card {
+    background-color: hsl(228, 28%, 20%);
+    margin-bottom: 2em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    padding: .5em;
+    border-radius: 8px;
+    transition: background-color .5s ;
+}
+
+.big-card:hover {
+    background-color: hsl(228, 28%, 25%)
+}
+
+.big-card.light {
+    background-color: hsl(227, 47%, 96%);
+    transition: background-color .5s ;
+}
+
+.big-card.light:hover {
+    background-color: hsl(227, 47%, 90%);
+}
+
+
+
+#card-1 {
+    border-top: 8px solid hsl(208, 92%, 53%);
+}
+
+#card-2 {
+    border-top: 8px solid hsl(203, 89%, 53%);
+}
+
+#card-3 {
+    border-top: 8px solid hsl(329, 70%, 58%);
+}
+
+#card-4 {
+    border-top: 8px solid hsl(356, 69%, 56%);
+}
+
+.followers-block {
+    text-align: center;
+}
+
+.followers-text {
+    margin-top: 0em;
+    text-transform: uppercase;
+    color: hsl(228, 34%, 66%);
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+
+.followers-data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.up {
+    color: hsl(163, 72%, 41%);
+    padding-right: .25em;
+    font-weight: 700;
+}
+
+.down {
+    color: hsl(356, 69%, 56%);
+    padding-right: .25em;
+    font-weight: 700;
+}
+
+.small-card {
+    background-color: hsl(228, 28%, 20%);
+    margin-bottom: 2em;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 8px;
+    transition: background-color .5s ;
+}
+
+.small-card:hover {
+    background-color: hsl(228, 28%, 25%)
+}
+
+.small-card.light {
+    background-color: hsl(227, 47%, 96%);
+    transition: background-color .5s ;
+}
+
+.small-card.light:hover {
+    background-color: hsl(227, 47%, 90%);
+}
+
+
+
+.small-card-data {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    padding-left: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+
+} 
+
+.small-card-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 1.5em;
+    padding-right: 1.5em;
+    padding-top: .5em;
+    padding-bottom: .5em;
+    
+}
+
+.small-card-percentages {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+
+@media (min-width: 800px) {
+    .container {
+        min-width: 650px;
+    }
+
+    .title {
+       border: none; 
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .label {
+        margin-right: 1.75em;
+    }
+
+    
+    .big-card-wrapper {
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .big-card {
+        width: 300px;
+    }
+
+    .small-card-wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+    }
+
+    .small-card {
+        width: 300px;
+    }
+}
+
+@media (min-width: 1300px) {
+    .container {
+        min-width: 1300px;
+    }
+
+    .header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .label {
+        margin: .75em;
+    }
+
+    .toggle {
+        align-content: flex-end;
+    }
+
+    .big-card-wrapper {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 25px;
+    }
+
+    .big-card {
+        width: 300px;
+    }
+
+    .title {
+        border: none;
+    }
+
+    .small-card-wrapper {
+        margin-top: 1em;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-column-gap: 25px;
+    }
+
+}
+
